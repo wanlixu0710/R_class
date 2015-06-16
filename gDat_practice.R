@@ -82,9 +82,7 @@ mean(subset(gDat, subset=country=="China")$lifeExp)
 #the same as the previous script
 mean((gDat[gDat$country=="China",])$lifeExp)
 #this script is looking at the mean lifeExp in the dataset of gDat, the same as mean(gDat$lifeExp)
-with(gDat, mean(lifeExp))
-
-##ggplot
+with(gDat, mean(lifeExp)
 
 
 
