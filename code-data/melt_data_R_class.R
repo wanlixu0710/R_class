@@ -17,3 +17,12 @@ head(pew.better)
 #rename the data
 names(pew.better)  <-  c("religion", "income", "n")
 head(pew.better)
+
+# Multiple variables in one column, "stringsAsFactors= FALSE" means not tale string as factors
+raw  <- read.csv(file="tb.csv", stringsAsFactors= FALSE)
+head (raw)
+#thinks raw$new_sp as a sum data, so wants to get rid of the whole column
+raw$new_sp <- NULL
+#This step get rid of the head of new_sp_
+names(raw) <- str_replace(names(raw), "new_sp_","")
+head(raw)
